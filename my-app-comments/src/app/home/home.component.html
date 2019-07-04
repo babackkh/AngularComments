@@ -10,25 +10,22 @@
         </form>        
       </div>
     </div>
-    <div class="row">
+    <div class="row comment">
       <div class="col-lg-4 col-md-3 col-sm-12">
-        <div class="comment d-flex">
-          <div class="star-box d-flex">
-            <span><i class="far fa-star"></i></span>
-            <span><i class="far fa-star"></i></span>
-            <span><i class="far fa-star"></i></span>
-            <span><i class="far fa-star"></i></span>
-            <span><i class="far fa-star"></i></span>
-          </div>
+        <div class="rating-bar d-flex">
+          <app-star></app-star>
           <div class="like-box d-flex ml-auto">
-            <span><i class="fas like fa-heart"></i></span>
+            <span><i class="fas fa-heart like"></i></span>
             <span><p class="like-number ml-1">0</p></span>
             <span><i class="far fa-heart dislike ml-3"></i></span>           
             <span><p class="dislike-number ml-1">0</p></span>
-          </div>
-          <div class="comment-text">
-            <p>Your Comment is Here</p>
-          </div>
+          </div>          
+        </div>
+        <div class="text-box d-flex">
+          <p>your comment is here</p>
+        </div>
+        <div class="col-md-12 text-red">
+            <hr>
         </div>
       </div>
     </div>
