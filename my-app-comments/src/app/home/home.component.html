@@ -11,6 +11,6 @@
       </div>
     </div>
     <div class="comment-show" *ngIf="commentShow">
-      <app-comment *ngFor="let t of commentBoxArray"></app-comment>    
+      <app-comment [commentTexty]= 'commentText' *ngFor="let t of commentBoxArray"></app-comment>    
     </div>
   </div>

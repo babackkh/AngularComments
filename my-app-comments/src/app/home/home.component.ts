@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, Input, ViewChild, ElementRef } from '@angular/core';
-import { stat } from 'fs';
+import { IComment } from '../Interface/icomment';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { stat } from 'fs';
 export class HomeComponent implements OnInit {
   commentBoxArray = [];
   commentShow = false;
-  @Input() commentText: string;
+  commentText: IComment = Comment;
   @ViewChild('textAreaRef' , {static: true}) textAreaInput: ElementRef;
   constructor() { }
 
