@@ -6,14 +6,11 @@ import { Component, OnInit, Output, Input } from '@angular/core';
   styleUrls: ['./star.component.css']
 })
 export class StarComponent implements OnInit {
+  hovered = false;
 
   constructor() { }
-  hovered = false;
 
   ngOnInit() {
   }
-  mouseOvered($event: any) {
-    this.hovered = true;
-    console.log(this.hovered);
-  }
+
 }

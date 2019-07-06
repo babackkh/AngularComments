@@ -1,5 +1,13 @@
-.star-box{
+span{
     color: gold;
+    opacity: 0.4;
 }
+span:hover{
+    opacity: 1;
+}
+span:hover ~ span{
+    opacity: 1;
+}
+
 
 
