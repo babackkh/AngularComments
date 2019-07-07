@@ -8,6 +8,12 @@ span:hover{
 span:hover ~ span{
     opacity: 1;
 }
+.width{
+    width: 90px;
+}
+.starbox{
+    overflow: hidden !important;
+}
 
 
 

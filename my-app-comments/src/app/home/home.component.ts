@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Output, Input, ViewChild, ElementRef, EventEmitter } from '@angular/core';
 import { IComment } from '../Interface/icomment';
 
 @Component({
@@ -9,8 +9,12 @@ import { IComment } from '../Interface/icomment';
 export class HomeComponent implements OnInit {
   commentBoxArray = [];
   commentShow = false;
-  commentText: IComment = Comment;
+  commentText: string;
+  commenty: IComment = {
+    comment: this.commentText,
+  };
   @ViewChild('textAreaRef' , {static: true}) textAreaInput: ElementRef;
+  addCommentClicked = new EventEmitter<IComment> ();
   constructor() { }
 
   ngOnInit() {
@@ -21,6 +25,9 @@ export class HomeComponent implements OnInit {
     // this.textAreaInput = commentInput.value;
     this.commentText = this.textAreaInput.nativeElement.value;
     console.log(this.commentText);
+  }
+  onAddCommentClicked() {
+    this.addCommentClicked.emit(this.commenty);
   }
 
 
