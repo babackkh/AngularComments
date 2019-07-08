@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { IComment } from '../Interface/icomment';
 
 @Component({
   selector: 'app-star',
@@ -15,6 +16,9 @@ export class StarComponent implements OnInit, OnChanges {
   }
   ngOnChanges(): void {
     this.starWidth = this.rating * 90 / 5;
+  }
+  starClicked(c: IComment) {
+    c.numberOfReviews++;
   }
 
 }

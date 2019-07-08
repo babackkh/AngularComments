@@ -1,5 +1,6 @@
 .like , .dislike{
     color: crimson;
+    cursor: pointer;
 }
 .like:hover , .dislike:hover{
     transform: scale(1.1);
