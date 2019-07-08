@@ -29,12 +29,15 @@ export class StarComponent implements OnInit, OnChanges {
     return 1;
   }
   twoStar() {
+    this.starClicked(this.c);
     return 2;
   }
   threeStar() {
+    this.starClicked(this.c);
     return 3;
   }
   fourStar() {
+    this.starClicked(this.c);
     return 4;
   }
   fiveStar() {
@@ -43,7 +46,7 @@ export class StarComponent implements OnInit, OnChanges {
   }
   starClicked(c: IComment) {
     this.c.numberOfReviews++;
-    console.log(c.numberOfReviews);
+
   }
 
 
