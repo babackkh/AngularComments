@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { StarComponent } from './star/star.component';
-import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,6 @@ import { CommentComponent } from './comment/comment.component';
     HomeComponent,
     HeaderComponent,
     StarComponent,
-    CommentComponent
   ],
   imports: [
     BrowserModule

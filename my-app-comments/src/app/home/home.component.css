@@ -1,0 +1,6 @@
+.like , .dislike{
+    color: crimson;
+}
+.like:hover , .dislike:hover{
+    transform: scale(1.1);
+}
