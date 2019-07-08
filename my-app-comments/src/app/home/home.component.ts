@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   addComment() {
-    let c: IComment = {
+    const c: IComment = {
       comment: this.commentTextValue.nativeElement.value,
       like: 0,
       dislike: 0,
