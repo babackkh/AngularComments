@@ -1,6 +1,7 @@
 span{
     color: gold;
     opacity: 0.4;
+    cursor: pointer;
 }
 span:hover{
     opacity: 1;
@@ -12,6 +13,7 @@ span:hover ~ span{
     width: 90px;
 }
 .starbox{
+    width: 90px;
     overflow: hidden !important;
 }
 

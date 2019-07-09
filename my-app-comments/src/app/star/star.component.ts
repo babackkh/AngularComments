@@ -8,8 +8,9 @@ import { IComment } from '../Interface/icomment';
 })
 export class StarComponent implements OnInit, OnChanges {
   starWidth: number;
+  rate: number;
   @Input() rating: number;
-   c: IComment = {
+  c: IComment = {
     comment: '',
     like: 0,
     dislike: 0,
@@ -24,30 +25,27 @@ export class StarComponent implements OnInit, OnChanges {
   ngOnChanges(): void {
     this.starWidth = this.rating * 90 / 5;
   }
-  oneStar() {
-    this.starClicked(this.c);
-    return 1;
-  }
-  twoStar() {
-    this.starClicked(this.c);
-    return 2;
-  }
-  threeStar() {
-    this.starClicked(this.c);
-    return 3;
-  }
-  fourStar() {
-    this.starClicked(this.c);
-    return 4;
-  }
-  fiveStar() {
-    this.starClicked(this.c);
-    return 5;
-  }
-  starClicked(c: IComment) {
+  oneStar(c: IComment , rate: number) {
     this.c.numberOfReviews++;
-
+    c.star += rate;
   }
+  twoStar(c: IComment , rate: number) {
+    this.c.numberOfReviews++;
+    c.star += rate;
+  }
+  threeStar(c: IComment , rate: number) {
+    this.c.numberOfReviews++;
+    c.star += rate;
+  }
+  fourStar(c: IComment , rate: number) {
+    this.c.numberOfReviews++;
+    c.star += rate;
+  }
+  fiveStar(c: IComment , rate: number) {
+    this.c.numberOfReviews++;
+    c.star += rate;
+  }
+
 
 
 }
