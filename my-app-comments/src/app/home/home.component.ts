@@ -14,6 +14,26 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  oneStar(c: IComment , rate: number) {
+    c.numberOfReviews++;
+    c.star += rate;
+  }
+  twoStar(c: IComment , rate: number) {
+    c.numberOfReviews++;
+    c.star += rate;
+  }
+  threeStar(c: IComment , rate: number) {
+    c.numberOfReviews++;
+    c.star += rate;
+  }
+  fourStar(c: IComment , rate: number) {
+    c.numberOfReviews++;
+    c.star += rate;
+  }
+  fiveStar(c: IComment , rate: number) {
+    c.numberOfReviews++;
+    c.star += rate;
+  }
   addComment() {
     const c: IComment = {
       comment: this.commentTextValue.nativeElement.value,
