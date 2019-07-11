@@ -14,7 +14,7 @@
       <div class="row comment" *ngFor="let c of comments">
         <div class="col-lg-4 col-md-3 col-sm-12">
           <div class="rating-bar d-flex">
-            <app-star [rating]= "c.numberOfReviews != 0 ? c.star / c.numberOfReviews : 0"></app-star>
+            <app-star></app-star>
             <div class="like-box d-flex ml-auto">
               <span (click)= "likeClicked(c)"><i class="fas fa-heart like"></i></span>
               <span><p class="like-number ml-1">{{ c.like }}</p></span>

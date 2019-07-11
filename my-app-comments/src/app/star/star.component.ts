@@ -1,21 +1,23 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { IComment } from '../Interface/icomment';
 
 @Component({
   selector: 'app-star',
   templateUrl: './star.component.html',
   styleUrls: ['./star.component.css']
 })
-export class StarComponent implements OnInit, OnChanges {
+export class StarComponent implements OnInit {
   starWidth: number;
-  @Input() rating: number;
+  reviewCount = 0;
+  sum = 0;
 
   constructor() { }
 
   ngOnInit() {
   }
-  ngOnChanges(): void {
-    this.starWidth = this.rating * 90 / 5;
+  starClicked(rate: number) {
+    this.reviewCount++;
+    this.sum = this.sum += rate;
+    this.starWidth = ( this.sum / this.reviewCount) * 90 / 5;
   }
 
 
