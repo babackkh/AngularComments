@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onStsrClivk(number){
+
+  }
   oneStar(c: IComment , rate: number) {
     c.numberOfReviews++;
     c.star += rate;

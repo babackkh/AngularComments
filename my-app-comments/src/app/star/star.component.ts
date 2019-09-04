@@ -10,7 +10,23 @@ export class StarComponent implements OnInit, OnChanges {
   starWidth: number;
   @Input() rating: number;
 
-  constructor() { }
+  sum:number = 0;
+  rate:number = 0;
+  qnty:number = 0;
+  _starWidth:number = 0;
+
+  onStarClick(nr){
+    // console.log(nr);
+    this.qnty++;
+    this.sum += nr;
+    this.rate = this.sum / this.qnty;
+    // console.log(this.qnty);
+    // console.log(this.sum);
+    // console.log(this.rate);
+
+    this._starWidth = this.rate * 90 / 5;
+    console.log(this._starWidth);
+  }
 
   ngOnInit() {
   }
